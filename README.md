@@ -39,10 +39,10 @@ In results are .events.out files which are for tensorboard visualization of trai
     It's recommended to install recent versions to avoid compatibility problems. The program will NOT run properly using mmdet 2.x.
 
 2. **Dataset**
-   Download converted and splitted data at . Place the folder **converted_data** at root directory.
+   Download converted and splitted data at https://1drv.ms/f/s!Avf2C4ss_613i5Foe4b44oKbQ_QcYA?e=hh4YPM. Place the folder **converted_data** at root directory.
 
 3. **Model weights**
-   Weights of trained model has been uploaded to onedrive: . Download **work_dirs** and place it at root directory.
+   Weights of trained model has been uploaded to onedrive: https://1drv.ms/f/s!Avf2C4ss_613i7FZOhYyLRM5UvmHQw?e=gf7CeY. Download **work_dirs** and place it at root directory.
 
 ## Testing the model
 
