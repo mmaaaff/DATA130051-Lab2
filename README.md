@@ -8,6 +8,8 @@
 - [Description](#description)
 - [Preparation](#preparation)
 - [Testing the model](#testing-the-model)
+- [Training the model](#training-the-model)
+- [](#)
 
 ## Description
 
@@ -56,10 +58,26 @@ python demo/image_demo.py \
     [--out-dir ${out_dir}]
 ```
 
-IMAGE_FILE can either be a single image or a directory where testing pictures anre stored. pred-score-thr is optional. Here is an example:
+**'IMAGE_FILE'** can either be a single image or a directory where testing pictures anre stored. **'pred-score-thr'** is optional. Here is an example:
 
 ```bash
 python mmdetection/demo/image_demo.py ./pictures config3.py --weights work_dirs/config3/epoch_273.pth --out-dir pictures/out/yolo/val
 ```
+
 You will see the visualization result in you output directory. Bboxes with label and score will be shown on the original picture.
 
+## Training the model
+
+You can also continue training the model:
+
+```bash
+bash ./tools/dist_train.sh \
+    ${CONFIG_FILE} \
+    ${GPU_NUM} \
+    [--auto-scale-lr] \
+    [--resume]
+```
+
+**'--auto-scale-lr'** allows auto scaling learning rate based on your actual batch size(this has to do with your number of GPUs). **'--resume'** will make the training resume from the last checkpoint.
+
+## 
