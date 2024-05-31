@@ -1,4 +1,4 @@
-<h1 align="center">DATA130051 Project1</h1>
+<h1 align="center">DATA130051 Project2</h1>
 
 <div align="center">周语诠</div>
 <div align="center">2024-5-31</div>
@@ -40,7 +40,7 @@ In results are .events.out files which are for tensorboard visualization of trai
    Download converted and splitted data at . Place the folder **converted_data** at root directory.
 
 3. **Model weights**
-   Weights of trained model has been uploaded to onedrive. Download **work_dirs** and place it at root directory.
+   Weights of trained model has been uploaded to onedrive: . Download **work_dirs** and place it at root directory.
 
 ## Testing the model
 
@@ -53,6 +53,7 @@ python demo/image_demo.py \
     [--weights ${WEIGHTS}] \
     [--device ${GPU_ID}] \
     [--pred-score-thr ${SCORE_THR}]
+    [--out-dir ${out_dir}]
 ```
 
 IMAGE_FILE can either be a single image or a directory where testing pictures anre stored. pred-score-thr is optional. Here is an example:
@@ -60,4 +61,5 @@ IMAGE_FILE can either be a single image or a directory where testing pictures an
 ```bash
 python mmdetection/demo/image_demo.py ./pictures config3.py --weights work_dirs/config3/epoch_273.pth --out-dir pictures/out/yolo/val
 ```
+You will see the visualization result in you output directory. Bboxes with label and score will be shown on the original picture.
 
